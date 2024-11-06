@@ -1,0 +1,35 @@
+{
+    "name": "inilim/array_combining",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Inilim\\ArrayCombining\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Inilim\\Test\\": "Tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "inilim"
+        },
+        {
+            "name": "Web community"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4 | ^8.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "@stable",
+        "inilim/dump": "dev-main",
+        "phpunit/phpunit": "^9.6",
+        "inilim/ipdo": "dev-main"
+    }
+}
