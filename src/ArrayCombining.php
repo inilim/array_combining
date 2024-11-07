@@ -128,7 +128,7 @@ final class ArrayCombining
         array $exceptKeysFromArraySecondary = []
     ): array {
         return \array_map(function ($item) use ($finalKey) {
-            $last = $this->last($item[$finalKey]);
+            $last = $this->last($item[$finalKey] ?? []);
             $item[$finalKey] = $last === false ? null : $last;
             return $item;
         }, $this->oneToMany(

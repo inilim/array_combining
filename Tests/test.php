@@ -12,45 +12,35 @@ Dump::init();
 
 dUsage();
 
-$conn = new IPDOMySQL('remfy_local', 'root', '', 'MySQL-8.2');
+// $conn = new IPDOMySQL('remfy_local', 'root', '', 'MySQL-8.2');
 
-$orders = $conn->exec('SELECT * FROM designer_orders LIMIT 25', 2);
+// $orders = $conn->exec('SELECT * FROM designer_orders LIMIT 25', 2);
 
-$contacts = $conn->exec(
-    'SELECT CO.order_id, C.* FROM designer_contact_order AS CO
-        JOIN designer_contacts AS C
-        ON CO.contact_id = C.id AND CO.order_id IN ({order_id})',
-    ['order_id' => \array_column($orders, 'id')],
-    2
-);
+// $contacts = $conn->exec(
+//     'SELECT CO.order_id, C.* FROM designer_contact_order AS CO
+//         JOIN designer_contacts AS C
+//         ON CO.contact_id = C.id AND CO.order_id IN ({order_id})',
+//     ['order_id' => \array_column($orders, 'id')],
+//     2
+// );
 
-$a = new ArrayCombining;
+$posts    = include __DIR__ . '/../Tests/Data/Post.php';
+$comments = include __DIR__ . '/../Tests/Data/Comment.php';
+$users    = include __DIR__ . '/../Tests/Data/User.php';
 
-$orders = [
-    [
-        'key1' => 1,
-        'key2' => 1,
-    ],
-    [
-        'key1' => 1,
-        'key2' => 1,
-    ],
-];
 
-$contacts = [
-    [
-        'key3' => 1,
-        'key4' => 1,
-    ],
-    [
-        'key3' => 1,
-        'key4' => 1,
-    ],
-];
+$s = new ArrayCombining;
 
-$res = $a->oneToMany($orders, $contacts, 'id', 'order_id', 'contacts', [], ['order_id']);
+$result = $s->oneToMany($posts, $comments, 'id', 'postId', 'comments', [], ['postId']);
+// $result = $s->oneToOne($posts, $users, 'userId', 'id', 'user');
+// $result = $s->oneToMany($orders, $contacts, 'id', 'order_id', 'contacts', [], ['order_id']);
+
+
 
 unset($orders, $contacts);
+unset($posts, $comments);
 
+
+var_export($result);
+// d($result);
 // deUsage();
-de($res);
