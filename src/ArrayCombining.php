@@ -5,10 +5,10 @@ namespace Inilim\ArrayCombining;
 final class ArrayCombining
 {
     /**
-     * @template One of array
+     * @template One of mixed[]
      * 
      * @param One[] $arrayOne
-     * @param array<mixed>[] $arrayMany
+     * @param mixed[][] $arrayMany
      * @param string|int $keyArrayOne
      * @param string|int $keyArrayMany
      * @param string|int $finalKey
@@ -53,7 +53,7 @@ final class ArrayCombining
                 $keyArrayOne
             ));
         }
-        unset($type);
+        unset($type, $firstArrayOne);
 
         // ---------------------------------------------
         // 
@@ -76,7 +76,9 @@ final class ArrayCombining
             $arrayMany,
             static function ($item) use ($keyArrayMany, $hasExceptMany, $exceptKeysFromArrayMany) {
                 return [
-                    $item[$keyArrayMany] ?? -1 => $hasExceptMany ? \array_diff_key($item, $exceptKeysFromArrayMany) : $item
+                    $item[$keyArrayMany] ?? -1 => $hasExceptMany
+                        ? \array_diff_key($item, $exceptKeysFromArrayMany)
+                        : $item
                 ];
             }
         );
