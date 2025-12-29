@@ -29,7 +29,7 @@ final class ArrayCombining
 
         $t = $this->last($arrayOne);
 
-        if ($t === false) {
+        if ($t === null) {
             return [];
         }
 
@@ -129,7 +129,7 @@ final class ArrayCombining
     ): array {
         return \array_map(function ($item) use ($finalKey) {
             $last = $this->last($item[$finalKey] ?? []);
-            $item[$finalKey] = $last === false ? null : $last;
+            $item[$finalKey] = $last;
             return $item;
         }, $this->oneToMany(
             $arrayPrimary,
@@ -143,13 +143,17 @@ final class ArrayCombining
     }
 
     /**
-     * @template TValue
-     * @param TValue[] $array
-     * @return TValue|false
+     * @template T
+     * @param array<T> $array
+     * @return (
+     *      $array is array{} ? null :
+     *      $array is non-empty-array ? T :
+     *      ?T
+     * )
      */
     protected function last(array $array)
     {
-        return \end($array);
+        return $array ? \current(\array_slice($array, -1)) : null;
     }
 
     /**

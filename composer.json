@@ -10,7 +10,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Inilim\\Test\\": "Tests/"
+            "Inilim\\Test\\": "tests/"
         }
     },
     "authors": [
@@ -24,7 +24,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4 | ^8.2"
+        "php": ">=7.4"
     },
     "require-dev": {
         "phpstan/phpstan": "@stable",
