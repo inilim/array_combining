@@ -27,31 +27,33 @@ final class ArrayCombining
         array $exceptKeysFromArrayMany = []
     ): array {
 
-        $t = $this->last($arrayOne);
+        $firstArrayOne = $this->first($arrayOne);
 
-        if ($t === null) {
+        if ($firstArrayOne === null) {
             return [];
         }
 
-        if (!\is_array($t)) {
+        if (!\is_array($firstArrayOne)) {
             throw new \InvalidArgumentException('invalid value "$arrayOne" not multidimensional array');
         }
 
-        if (!\array_key_exists($keyArrayOne, $t)) {
+        if (!\array_key_exists($keyArrayOne, $firstArrayOne)) {
             throw new \InvalidArgumentException(\sprintf(
                 'invalid value "$arrayOne" not found key $keyArrayOne: "%s"',
                 $keyArrayOne
             ));
         }
 
+        $type = \gettype($firstArrayOne[$keyArrayOne]);
         if (
-            !(\is_int($t[$keyArrayOne]) || \is_string($t[$keyArrayOne]))
+            !($type === 'integer' || $type === 'string')
         ) {
             throw new \InvalidArgumentException(\sprintf(
                 'invalid value "$arrayOne" value by key $keyArrayOne: "%s" must be a integer or a string',
                 $keyArrayOne
             ));
         }
+        unset($type);
 
         // ---------------------------------------------
         // 
@@ -128,8 +130,7 @@ final class ArrayCombining
         array $exceptKeysFromArraySecondary = []
     ): array {
         return \array_map(function ($item) use ($finalKey) {
-            $last = $this->last($item[$finalKey] ?? []);
-            $item[$finalKey] = $last;
+            $item[$finalKey] = $this->first($item[$finalKey] ?? []);
             return $item;
         }, $this->oneToMany(
             $arrayPrimary,
@@ -151,9 +152,12 @@ final class ArrayCombining
      *      ?T
      * )
      */
-    protected function last(array $array)
+    protected function first(array $array)
     {
-        return $array ? \current(\array_slice($array, -1)) : null;
+        foreach ($array as $value) {
+            return $value;
+        }
+        return null;
     }
 
     /**
