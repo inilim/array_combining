@@ -1,0 +1,225 @@
+<?php
+
+return array(
+    0 =>
+    array(
+        'userId' => 1,
+        'id' => 1,
+        'title' => 'Introduction to Artificial Intelligence',
+        'body' => 'Learn the basics of Artificial Intelligence and its applications in various industries.',
+        'link' => 'https://example.com/article1',
+        'comment_count' => 8,
+        'user' =>
+        array(
+            'id' => 1,
+            'name' => 'Emily Johnson',
+            'company' => 'ABC Corporation',
+            'username' => 'emily_johnson',
+            'email' => 'emily.johnson@abccorporation.com',
+            'address' => '123 Main St',
+            'zip' => '12345',
+            'state' => 'California',
+            'country' => 'USA',
+            'phone' => '+1-555-123-4567',
+            'photo' => 'https://loremflickr.com/640/480?lock&#x3D;5466851135979520',
+        ),
+    ),
+    1 =>
+    array(
+        'userId' => 2,
+        'id' => 2,
+        'title' => 'Web Development with React',
+        'body' => 'Build modern web applications using React.js and explore its powerful features.',
+        'link' => 'https://example.com/article2',
+        'comment_count' => 12,
+        'user' =>
+        array(
+            'id' => 2,
+            'name' => 'Michael Williams',
+            'company' => 'XYZ Corp',
+            'username' => 'michael_williams',
+            'email' => 'michael.williams@xyzcorp.com',
+            'address' => '456 Elm Ave',
+            'zip' => '67890',
+            'state' => 'New York',
+            'country' => 'USA',
+            'phone' => '+1-555-987-6543',
+        ),
+    ),
+    2 =>
+    array(
+        'userId' => 3,
+        'id' => 3,
+        'title' => 'Data Science Fundamentals',
+        'body' => 'Dive into the world of Data Science and discover how to analyze and interpret data.',
+        'link' => 'https://example.com/article3',
+        'comment_count' => 5,
+        'user' =>
+        array(
+            'id' => 3,
+            'name' => 'John Smith',
+            'company' => 'Acme Inc.',
+            'username' => 'john_smith',
+            'email' => 'john.smith@acmeinc.com',
+            'address' => '789 Oak Rd',
+            'zip' => '54321',
+            'state' => 'Texas',
+            'country' => 'USA',
+            'phone' => '+1-555-222-3333',
+        ),
+    ),
+    3 =>
+    array(
+        'userId' => 4,
+        'id' => 4,
+        'title' => 'Machine Learning Algorithms',
+        'body' => 'Explore various Machine Learning algorithms and understand their workings.',
+        'link' => 'https://example.com/article4',
+        'comment_count' => 17,
+        'user' =>
+        array(
+            'id' => 4,
+            'name' => 'Emma Davis',
+            'company' => 'Tech Solutions Ltd.',
+            'username' => 'emma_davis',
+            'email' => 'emma.davis@techsolutions.com',
+            'address' => '101 Maple Ln',
+            'zip' => '13579',
+            'state' => 'Florida',
+            'country' => 'USA',
+            'phone' => '+1-555-444-5555',
+        ),
+    ),
+    4 =>
+    array(
+        'userId' => 5,
+        'id' => 5,
+        'title' => 'Introduction to Blockchain',
+        'body' => 'Learn about Blockchain technology, its use-cases, and how it ensures secure transactions.',
+        'link' => 'https://example.com/article5',
+        'comment_count' => 3,
+        'user' =>
+        array(
+            'id' => 5,
+            'name' => 'William Brown',
+            'company' => 'Global Manufacturing',
+            'username' => 'william_brown',
+            'email' => 'william.brown@globalmfg.com',
+            'address' => '222 Pine St',
+            'zip' => '56789',
+            'state' => 'California',
+            'country' => 'USA',
+            'phone' => '+1-555-666-7777',
+        ),
+    ),
+    5 =>
+    array(
+        'userId' => 6,
+        'id' => 6,
+        'title' => 'iOS App Development',
+        'body' => 'Get started with iOS app development using Swift and create feature-rich applications.',
+        'link' => 'https://example.com/article6',
+        'comment_count' => 10,
+        'user' =>
+        array(
+            'id' => 6,
+            'name' => 'Sophia Lee',
+            'company' => 'Food Delights',
+            'username' => 'sophia_lee',
+            'email' => 'sophia.lee@fooddelights.com',
+            'address' => '333 Culinary Ave',
+            'zip' => '24680',
+            'state' => 'New York',
+            'country' => 'USA',
+            'phone' => '+1-555-888-9999',
+        ),
+    ),
+    6 =>
+    array(
+        'userId' => 7,
+        'id' => 7,
+        'title' => 'Python for Data Analysis',
+        'body' => 'Utilize Python libraries like Pandas and NumPy for data manipulation and analysis.',
+        'link' => 'https://example.com/article7',
+        'comment_count' => 15,
+        'user' =>
+        array(
+            'id' => 7,
+            'name' => 'James Anderson',
+            'company' => 'Financial Strategies',
+            'username' => 'james_anderson',
+            'email' => 'james.anderson@financialstrategies.com',
+            'address' => '444 Wealth St',
+            'zip' => '97531',
+            'state' => 'Texas',
+            'country' => 'USA',
+            'phone' => '+1-555-111-2222',
+        ),
+    ),
+    7 =>
+    array(
+        'userId' => 8,
+        'id' => 8,
+        'title' => 'Cybersecurity Best Practices',
+        'body' => 'Learn essential cybersecurity practices to safeguard your digital assets.',
+        'link' => 'https://example.com/article8',
+        'comment_count' => 6,
+        'user' =>
+        array(
+            'id' => 8,
+            'name' => 'Olivia Martin',
+            'company' => 'EcoTech Solutions',
+            'username' => 'olivia_martin',
+            'email' => 'olivia.martin@ecotechsolutions.com',
+            'address' => '555 Green Rd',
+            'zip' => '54321',
+            'state' => 'Florida',
+            'country' => 'USA',
+            'phone' => '+1-555-333-4444',
+        ),
+    ),
+    8 =>
+    array(
+        'userId' => 9,
+        'id' => 9,
+        'title' => 'Cloud Computing Essentials',
+        'body' => 'Understand the fundamentals of Cloud Computing and its benefits for businesses.',
+        'link' => 'https://example.com/article9',
+        'comment_count' => 9,
+        'user' =>
+        array(
+            'id' => 9,
+            'name' => 'Robert Johnson',
+            'company' => 'Fashion Trends Inc.',
+            'username' => 'robert_johnson',
+            'email' => 'robert.johnson@fashiontrends.com',
+            'address' => '666 Style Ave',
+            'zip' => '13579',
+            'state' => 'California',
+            'country' => 'USA',
+            'phone' => '+1-555-777-8888',
+        ),
+    ),
+    9 =>
+    array(
+        'userId' => 10,
+        'id' => 10,
+        'title' => 'Introduction to UX Design',
+        'body' => 'Discover the principles of User Experience (UX) design and create intuitive user interfaces.',
+        'link' => 'https://example.com/article10',
+        'comment_count' => 21,
+        'user' =>
+        array(
+            'id' => 10,
+            'name' => 'Sophie Davis',
+            'company' => 'Healthcare Solutions',
+            'username' => 'sophie_davis',
+            'email' => 'sophie.davis@healthcaresolutions.com',
+            'address' => '777 Wellness Rd',
+            'zip' => '24680',
+            'state' => 'New York',
+            'country' => 'USA',
+            'phone' => '+1-555-999-0000',
+        ),
+    ),
+);
