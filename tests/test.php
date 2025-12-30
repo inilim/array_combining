@@ -7,11 +7,15 @@ require_once '../vendor/autoload.php';
 use Inilim\Dump\Dump;
 use Inilim\IPDO\IPDOMySQL;
 use Inilim\ArrayCombining\ArrayCombining;
+use Inilim\Tool\Other;
+use Inilim\Tool\VD;
 
-Dump::init();
 
-dUsage();
 
+
+
+
+VD::de();
 // $conn = new IPDOMySQL('remfy_local', 'root', '', 'MySQL-8.2');
 
 // $orders = $conn->exec('SELECT * FROM designer_orders LIMIT 25', 2);

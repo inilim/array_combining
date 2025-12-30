@@ -30,6 +30,7 @@
         "phpstan/phpstan": "@stable",
         "inilim/dump": "dev-main",
         "phpunit/phpunit": "^9.6",
-        "inilim/ipdo": "dev-main"
+        "inilim/ipdo": "dev-main",
+        "inilim/tools": "dev-main"
     }
 }
